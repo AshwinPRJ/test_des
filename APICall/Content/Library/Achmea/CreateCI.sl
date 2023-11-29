@@ -5,7 +5,7 @@ flow:
     - CIType
     - businessApplication
   workflow:
-    - admin:
+    - test1:
         do:
           Achmea.Shared.Micro-Focus.uCMDB.Subflow.createObjectUCMDB:
             - ciType: '${CIType}'
@@ -21,7 +21,7 @@ flow:
 extensions:
   graph:
     steps:
-      admin:
+      test1:
         x: 360
         'y': 80
         navigate:
