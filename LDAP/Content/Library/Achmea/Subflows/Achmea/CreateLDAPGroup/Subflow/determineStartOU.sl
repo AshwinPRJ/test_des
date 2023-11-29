@@ -4,7 +4,7 @@ flow:
   inputs:
     - ldapGroupName
   workflow:
-    - admin:
+    - ashwin:
         do:
           Achmea.Subflows.Achmea.CreateLDAPGroup.Operations.determineLDAPStartOU:
             - Name: '${ldapGroupName}'
@@ -33,7 +33,7 @@ flow:
 extensions:
   graph:
     steps:
-      admin:
+      ashwin:
         x: 240
         'y': 120
         navigate:
