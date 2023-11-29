@@ -11,6 +11,7 @@ flow:
             - ciType: '${CIType}'
             - prop: name
             - prop1: '${businessApplication}'
+            - input_0: null
         navigate:
           - FAILURE: on_failure
           - SUCCESS: SUCCESS
