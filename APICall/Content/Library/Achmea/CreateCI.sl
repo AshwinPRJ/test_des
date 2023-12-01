@@ -5,7 +5,7 @@ flow:
     - CIType
     - businessApplication
   workflow:
-    - asdfss:
+    - admin_eirwe:
         do:
           Achmea.Shared.Micro-Focus.uCMDB.Subflow.createObjectUCMDB:
             - ciType: '${CIType}'
@@ -21,7 +21,7 @@ flow:
 extensions:
   graph:
     steps:
-      asdfss:
+      admin_eirwe:
         x: 360
         'y': 80
         navigate:
