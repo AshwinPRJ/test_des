@@ -15,7 +15,7 @@ namespace: Achmea
 flow:
   name: createSecurityIncidentsForOpenShares
   workflow:
-    - setVars_do_nothing:
+    - without:
         do:
           io.cloudslang.base.utils.do_nothing:
             - overAllIncidentDescription: null
@@ -99,9 +99,9 @@ flow:
 extensions:
   graph:
     steps:
-      setVars_do_nothing:
-        x: 40
-        'y': 40
+      manageSecurityIncident:
+        x: 720
+        'y': 440
       getDataExcelListOpenShares_get_cell:
         x: 200
         'y': 40
@@ -118,9 +118,9 @@ extensions:
       getTokenSmaAchmea_SMA:
         x: 360
         'y': 40
-      manageSecurityIncident:
-        x: 720
-        'y': 440
+      without:
+        x: 40
+        'y': 40
     results:
       SUCCESS:
         e2bff0a4-d017-d4e8-78c6-594a9777aada:
