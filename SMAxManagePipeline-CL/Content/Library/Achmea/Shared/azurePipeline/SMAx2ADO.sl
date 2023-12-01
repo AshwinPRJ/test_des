@@ -22,7 +22,7 @@ flow:
     - flowReference
     - systemName
   workflow:
-    - setVars_do_nothing:
+    - sss:
         do:
           io.cloudslang.base.utils.do_nothing:
             - flowVarValues: ''
@@ -176,13 +176,6 @@ extensions:
           2fa0c088-a0a0-e0d0-8f57-9cb8015f163c:
             targetId: 38ee20c0-8944-ca2c-4255-f0b6744b0ee2
             port: FAILURE
-      setVars_do_nothing:
-        x: 40
-        'y': 120
-        navigate:
-          d166c229-21bd-9f34-7244-232a7886afcb:
-            targetId: 38ee20c0-8944-ca2c-4255-f0b6744b0ee2
-            port: FAILURE
       startPowershellRAS_Achmea:
         x: 1040
         'y': 320
@@ -195,6 +188,13 @@ extensions:
         'y': 560
         navigate:
           b174103a-4939-65da-9bd5-adc52ef592be:
+            targetId: 38ee20c0-8944-ca2c-4255-f0b6744b0ee2
+            port: FAILURE
+      sss:
+        x: 40
+        'y': 120
+        navigate:
+          d166c229-21bd-9f34-7244-232a7886afcb:
             targetId: 38ee20c0-8944-ca2c-4255-f0b6744b0ee2
             port: FAILURE
       getJsonValuePwsResult:
