@@ -15,7 +15,7 @@ namespace: Achmea
 flow:
   name: createSecurityIncidentsForOpenShares
   workflow:
-    - setVars_do_nothing:
+    - without:
         do:
           io.cloudslang.base.utils.do_nothing:
             - overAllIncidentDescription: null
@@ -59,10 +59,10 @@ flow:
           - return_code
           - Counter
         navigate:
-          - HAS_MORE: asda
+          - HAS_MORE: manageExcelRow
           - NO_MORE: SUCCESS
           - FAILURE: on_failure
-    - asda:
+    - manageExcelRow:
         do:
           Achmea.Actions.Operations.manageExcelRow:
             - excelRow: '${excelRow}'
@@ -99,9 +99,9 @@ flow:
 extensions:
   graph:
     steps:
-      setVars_do_nothing:
-        x: 40
-        'y': 40
+      manageSecurityIncident:
+        x: 720
+        'y': 440
       getDataExcelListOpenShares_get_cell:
         x: 200
         'y': 40
@@ -112,14 +112,14 @@ extensions:
           30640d75-2180-2c40-6a78-990ccf0ed395:
             targetId: e2bff0a4-d017-d4e8-78c6-594a9777aada
             port: NO_MORE
-      manageSecurityIncident:
+      manageExcelRow:
         x: 720
-        'y': 440
+        'y': 40
       getTokenSmaAchmea_SMA:
         x: 360
         'y': 40
-      asda:
-        x: 720
+      without:
+        x: 40
         'y': 40
     results:
       SUCCESS:
