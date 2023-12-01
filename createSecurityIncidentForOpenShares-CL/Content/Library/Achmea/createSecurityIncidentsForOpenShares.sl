@@ -59,10 +59,10 @@ flow:
           - return_code
           - Counter
         navigate:
-          - HAS_MORE: manageExcelRow
+          - HAS_MORE: asda
           - NO_MORE: SUCCESS
           - FAILURE: on_failure
-    - manageExcelRow:
+    - asda:
         do:
           Achmea.Actions.Operations.manageExcelRow:
             - excelRow: '${excelRow}'
@@ -112,15 +112,15 @@ extensions:
           30640d75-2180-2c40-6a78-990ccf0ed395:
             targetId: e2bff0a4-d017-d4e8-78c6-594a9777aada
             port: NO_MORE
-      manageExcelRow:
-        x: 720
-        'y': 40
-      getTokenSmaAchmea_SMA:
-        x: 360
-        'y': 40
       manageSecurityIncident:
         x: 720
         'y': 440
+      getTokenSmaAchmea_SMA:
+        x: 360
+        'y': 40
+      asda:
+        x: 720
+        'y': 40
     results:
       SUCCESS:
         e2bff0a4-d017-d4e8-78c6-594a9777aada:
