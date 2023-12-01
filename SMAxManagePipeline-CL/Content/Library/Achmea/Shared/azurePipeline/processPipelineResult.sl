@@ -10,7 +10,7 @@ flow:
         "CustomData":"test CustomData"
         }}
   workflow:
-    - procesJsonResult:
+    - test:
         do:
           Achmea.Shared.Operation.procesJsonResult:
             - jsonObject: '${jsonObject}'
@@ -48,16 +48,6 @@ flow:
 extensions:
   graph:
     steps:
-      procesJsonResult:
-        x: 320
-        'y': 360
-      updatePipelineRequest:
-        x: 480
-        'y': 360
-        navigate:
-          1d40d88d-2cac-4204-e786-5d4b841665aa:
-            targetId: 17394069-8ff2-3d92-49ce-ca1d8456b8bc
-            port: FAILURE
       updatePipelineRequest_1:
         x: 640
         'y': 360
@@ -68,6 +58,16 @@ extensions:
           e1850845-38d0-3cce-b233-5c4fce9df5c9:
             targetId: 17394069-8ff2-3d92-49ce-ca1d8456b8bc
             port: FAILURE
+      updatePipelineRequest:
+        x: 480
+        'y': 360
+        navigate:
+          1d40d88d-2cac-4204-e786-5d4b841665aa:
+            targetId: 17394069-8ff2-3d92-49ce-ca1d8456b8bc
+            port: FAILURE
+      test:
+        x: 320
+        'y': 360
     results:
       SUCCESS:
         22745837-13cc-b8ba-d1c1-a3413afaa3fa:
